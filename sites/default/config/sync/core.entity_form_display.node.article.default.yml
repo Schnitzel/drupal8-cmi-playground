@@ -7,7 +7,8 @@ dependencies:
     - field.field.node.article.comment
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
-    - image.style.thumbnail
+    - field.field.node.article.field_test
+    - field.field.node.article.field_test2
     - node.type.article
   module:
     - comment
@@ -49,7 +50,10 @@ content:
   field_tags:
     type: entity_reference_autocomplete_tags
     weight: 3
-    settings: {  }
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   path:
     type: path
@@ -83,4 +87,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_test: true
+  field_test2: true
